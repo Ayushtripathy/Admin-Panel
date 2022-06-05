@@ -618,6 +618,12 @@ export const cartData = [
     category: "Food Item",
     price: "$190",
   },
+  {
+    image: product8,
+    name: "Red color candy",
+    category: "Food Item",
+    price: "$290",
+  },
 ];
 
 export const chatData = [
