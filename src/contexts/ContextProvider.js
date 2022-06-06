@@ -13,6 +13,8 @@ export const ContextProvider = ({ children }) => {
   const [activeMenu, setActiveMenu] = useState(true);
   const [isClicked, setIsClicked] = useState(initialState);
   const [screenSize, setScreenSize] = useState(undefined);
+  const [currentMode, setCurrentMode] = useState("Light");
+  const [currentColor, setCurrentColor] = useState("blue");
 
   const handleClick = (clicked) => {
     setIsClicked({ ...initialState, [clicked]: true });
@@ -29,6 +31,8 @@ export const ContextProvider = ({ children }) => {
         screenSize,
         setScreenSize,
         initialState,
+        currentMode,
+        currentColor,
       }}
     >
       {children}
