@@ -34,7 +34,7 @@ const Customers = () => {
         editSettings={editing}
       >
         <ColumnsDirective>
-          {customersGrid.map((item, index) => (
+          {customersGrid?.map((item, index) => (
             <ColumnDirective key={index} {...item} />
           ))}
         </ColumnsDirective>

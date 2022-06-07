@@ -17,19 +17,19 @@ import {
 import { useStateContext } from "../contexts/ContextProvider";
 import product9 from "../data/product9.jpg";
 
-// const DropDown = ({ currentMode }) => (
-//   <div className="w-28 border-1 border-color px-2 py-1 rounded-md">
-//     <DropDownListComponent
-//       id="time"
-//       fields={{ text: "Time", value: "Id" }}
-//       style={{ border: "none", color: currentMode === "Dark" && "white" }}
-//       value="1"
-//       dataSource={dropdownData}
-//       popupHeight="220px"
-//       popupWidth="120px"
-//     />
-//   </div>
-// );
+const DropDown = ({ currentMode }) => (
+  <div className="w-28 border-1 border-color px-2 py-1 rounded-md">
+    <DropDownListComponent
+      id="time"
+      fields={{ text: "Time", value: "Id" }}
+      style={{ border: "none", color: currentMode === "Dark" && "white" }}
+      value="1"
+      dataSource={dropdownData}
+      popupHeight="220px"
+      popupWidth="120px"
+    />
+  </div>
+);
 
 const Ecommerce = () => {
   const { currentColor, currentMode } = useStateContext();
@@ -61,7 +61,7 @@ const Ecommerce = () => {
           </div>
         </div>
         <div className="flex m-3 flex-wrap justify-center gap-1 items-center">
-          {earningData.map((item) => (
+          {earningData?.map((item) => (
             <div
               key={item.title}
               className="bg-white h-44 dark:text-gray-200 dark:bg-secondary-dark-bg md:w-56  p-4 pt-9 rounded-2xl "
@@ -146,7 +146,7 @@ const Ecommerce = () => {
             </div>
           </div>
         </div>
-        {/* <div>
+        <div>
           <div
             className=" rounded-2xl md:w-400 p-4 m-3"
             style={{ backgroundColor: currentColor }}
@@ -200,7 +200,7 @@ const Ecommerce = () => {
             <DropDown currentMode={currentMode} />
           </div>
           <div className="mt-10 w-72 md:w-400">
-            {recentTransactions.map((item) => (
+            {recentTransactions?.map((item) => (
               <div key={item.title} className="flex justify-between mt-4">
                 <div className="flex gap-4">
                   <button
@@ -259,7 +259,7 @@ const Ecommerce = () => {
           </div>
 
           <div className="mt-10 ">
-            {weeklyStats.map((item) => (
+            {weeklyStats?.map((item) => (
               <div
                 key={item.title}
                 className="flex justify-between mt-4 w-full"
@@ -309,7 +309,7 @@ const Ecommerce = () => {
           </p>
 
           <div className="flex gap-4 border-b-1 border-color mt-6">
-            {medicalproBranding.data.map((item) => (
+            {medicalproBranding.data?.map((item) => (
               <div
                 key={item.title}
                 className="border-r-1 border-color pr-4 pb-2"
@@ -323,7 +323,7 @@ const Ecommerce = () => {
             <p className="text-md font-semibold mb-2">Teams</p>
 
             <div className="flex gap-4">
-              {medicalproBranding.teams.map((item) => (
+              {medicalproBranding.teams?.map((item) => (
                 <p
                   key={item.name}
                   style={{ background: item.color }}
@@ -337,7 +337,7 @@ const Ecommerce = () => {
           <div className="mt-2">
             <p className="text-md font-semibold mb-2">Leaders</p>
             <div className="flex gap-4">
-              {medicalproBranding.leaders.map((item, index) => (
+              {medicalproBranding.leaders?.map((item, index) => (
                 <img
                   key={index}
                   className="rounded-full w-8 h-8"
@@ -387,9 +387,9 @@ const Ecommerce = () => {
                   borderRadius="10px"
                 />
               </div>
-            </div> */}
-        {/* </div> */}
-        {/* </div> */}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

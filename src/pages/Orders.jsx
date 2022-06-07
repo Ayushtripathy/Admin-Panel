@@ -33,7 +33,7 @@ const Orders = () => {
         editSettings={editing}
       >
         <ColumnsDirective>
-          {ordersGrid.map((item, index) => (
+          {ordersGrid?.map((item, index) => (
             <ColumnDirective key={index} {...item} />
           ))}
         </ColumnsDirective>
